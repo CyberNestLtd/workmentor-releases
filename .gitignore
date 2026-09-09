@@ -1,0 +1,26 @@
+# Build artifacts live here only long enough to be uploaded as release assets.
+# They must never be committed: release assets are a separate system with no
+# storage limit, while committed binaries hit the repo's 1 GB soft / 5 GB hard
+# limit and stay in history forever.
+dist/
+
+# Artifacts dropped in the repo root, ready to publish.
+*.exe
+*.dmg
+*.pkg
+*.zip
+*.AppImage
+*.deb
+*.rpm
+*.snap
+*.tar.gz
+*.blockmap
+
+# electron-builder update manifests — uploaded as release assets, never tracked.
+latest.yml
+latest-mac.yml
+latest-linux.yml
+
+# Editor / OS noise
+*.swp
+.DS_Store
